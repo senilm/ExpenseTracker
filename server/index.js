@@ -2,6 +2,7 @@ require('dotenv').config();
 require('express-async-errors')
 const express= require('express')
 const cors = require('cors')
+const path = require('path')
 const errorHandler = require('./middleware/errorHandler')
 const authMiddleware = require('./middleware/authenticationMiddleware')
 const notFound= require('./middleware/notFound')
@@ -36,7 +37,9 @@ app.use('/toPay',authMiddleware,toPayRouter)
 app.get('/',(req,res)=>{
     res.status(200).json('hi')
 })
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/dist', 'index.html'));
+});
 
 
 app.use(errorHandler)

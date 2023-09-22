@@ -4,7 +4,7 @@ import { getAccessToken } from './utils'
 
 export const getAuthHeader = () => getAccessToken()
 
-const API_URL = 'http://localhost:3001'
+const API_URL = 'https://expense-tracker-fnia.onrender.com'
 
 export const axiosInstance = axios.create({
     baseURL:API_URL,

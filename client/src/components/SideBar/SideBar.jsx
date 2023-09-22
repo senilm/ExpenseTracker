@@ -1,14 +1,15 @@
 import { useState } from "react"
 import { navigationLinks } from "../../constants/constants"
 import Cookies from "js-cookie"
-
+import { useNavigate } from "react-router-dom"
 const SideBar = ({ userData }) => {
 
   const [showLink, setShowLink] = useState(false)
-
+  const navigate=useNavigate()
   const logOut = () => {
     sessionStorage.clear();
     Cookies.remove('userData')
+    navigate('/')
   }
   const toggleLink = () => {
     setShowLink(!showLink)
@@ -37,10 +38,10 @@ const SideBar = ({ userData }) => {
             } lg:block flex flex-col justify-center items-center m-3 max-lg:absolute max-lg:top-4 max-lg:left-[-130%] transition-all text-black max-lg:bg-white `}
           >
             {navigationLinks.map((link) => (
-              <li key={link.title} className=" my-1 py-2 px-2 "><a href={link.path} className="flex gap-2" >
+              <li key={link.title} className=" my-1 py-2 px-2 "><div onClick={()=>navigate(link.path)} className="flex gap-2" >
                 <div>{link.icon}</div>
-                <div className="font-montserrat ">{link.title}</div>
-              </a></li>
+                <div className="font-montserrat cursor-pointer">{link.title}</div>
+              </div></li>
             ))}
           </ul>
         </div>
@@ -48,7 +49,18 @@ const SideBar = ({ userData }) => {
 
         <div className="lg:mt-20  px-2 ">
           <ul>
-            <li className="lg:flex " ><a href="/" onClick={logOut} className="font-montserrat"><i className="fas fa-sign-out-alt mr-2"></i>Log out</a></li>
+          {/* <li className="lg:flex " >
+              <a href="/" onClick={logOut} className="font-montserrat">
+              <i className="fas fa-sign-out-alt mr-2"></i>
+                Log out
+              </a>
+            </li> */}
+
+            <li className="lg:flex " >
+              <div onClick={logOut} className="font-montserrat cursor-pointer">
+                <i className="fas fa-sign-out-alt mr-2"></i>Log out
+              </div>
+            </li>
           </ul>
         </div>
       </div>

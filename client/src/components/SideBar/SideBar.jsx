@@ -28,7 +28,7 @@ const SideBar = ({ userData }) => {
 
         <div className="lg:mt-20 text-blue-400 max-lg:flex max-lg:flex-col max-lg:relative ">
           <button
-            className="block lg:hidden text-black  self-center "
+            className="block lg:hidden text-black  self-center font-montserrat"
             onClick={toggleLink}
           >
             Menu

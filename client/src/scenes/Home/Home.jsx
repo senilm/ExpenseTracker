@@ -160,7 +160,7 @@ const Home = () => {
           <div className='basis-[50%] '>
             <div className="p-4">
 
-              <div className='flex flex-col max-lg:border-2 max-lg:border-white max-lg:mt-10 max-lg:p-2 rounded-[30px] '>
+              <div className='min-h-[260px] flex flex-col max-lg:border-2 max-lg:border-white max-lg:mt-10 max-lg:p-2 rounded-[30px] '>
                 <h1 className='text-xl text-center max-lg:m-2 font-montserrat'>Recent Transactions</h1>
                 <div>
                   {transactions.map((item) => {
@@ -169,7 +169,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="min-h-[200px] mt-7 flex flex-col rounded-[30px] p-3 justify-between shadow-md border-2 border-white max-lg:mt-14 ">
+              <div className="min-h-[200px] mt-5 flex flex-col rounded-[30px] p-3 justify-between shadow-md border-2 border-white max-lg:mt-14 ">
                 <h1 className=' text-center font-montserrat'>To Pay List</h1>
                 <div className='border-2 border-white rounded-[23px] bg-white-400 shadow-md '>
                   <div className='flex flex-col max-h-[100px] overflow-y-auto '>

@@ -2,7 +2,7 @@ const  Expense = require( "../models/expense")
 const { BadRequestError,NotFoundError,UnauthenticatedError } = require("../errors")
 
 const getExpenses = async(req,res)=>{
-    const expenses = await Expense.find({});
+    const expenses = await Expense.find({user:req.user.id});
     if(!expenses){
         throw new NotFoundError("Expenses not found")
     }

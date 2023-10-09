@@ -52,7 +52,7 @@ const Chart = ({incomesData, expensesData}) => {
                         return amount
                     })
                 ],
-                backgroundColor:'orange ',
+                backgroundColor:'yellow',
                 tension:0.2
             }
         ]

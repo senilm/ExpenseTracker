@@ -74,7 +74,7 @@ const Income = ({ toggleDark }) => {
   }, [val]);
 
   return (
-    <section className=" flex max-container gap-4 lg:pt-4 lg:pb-3 max-lg:pt-3 max-lg:px-2 lg:px-10 max-lg:flex-col dark:bg-slate-950 transition-all">
+    <section className=" flex max-container gap-4 max-lg:pb-4 lg:pt-4 lg:pb-3 max-lg:pt-3 max-lg:px-2 lg:px-10 max-lg:flex-col dark:bg-slate-950 transition-all">
       <div
         id="rightSide"
         className="bg-gradient-to-b from-gray-200 to-yellow-100 shadow-xl p-4 border-[1px] dark:border-opacity-25 border-white rounded-[30px] border-white-600  flex-1  max-lg:px-0 max-lg:py-5 dark:bg-gradient-to-b  dark:from-slate-950 dark:to-gray-700 dark:via-gray-900 transition-all max-lg:min-h-screen"

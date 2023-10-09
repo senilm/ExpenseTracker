@@ -35,7 +35,7 @@ const Transaction = ({ toggleDark }) => {
   }, []);
 
   return (
-    <section className="flex dark:bg-slate-950 max-container max-lg:px-2 max-lg:pt-3 gap-4 lg:pt-4 lg:pb-3 max-lg:flex-col px-10 transition-all min-h-screen">
+    <section className="flex dark:bg-slate-950 max-container max-lg:pb-4 max-lg:px-2 max-lg:pt-3 gap-4 lg:pt-4 lg:pb-3 max-lg:flex-col px-10 transition-all min-h-screen">
       <div
         id="rightSide"
         className="bg-gradient-to-b from-gray-200 to-yellow-100 dark:bg-gradient-to-b  dark:from-slate-950 dark:to-gray-700 dark:via-gray-900 shadow-xl w-full px-4 border-[1px] border-white

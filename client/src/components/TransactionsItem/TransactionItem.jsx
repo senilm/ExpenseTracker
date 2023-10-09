@@ -11,7 +11,7 @@ const TransactionItem = ({amount,category,date,description,type}) => {
           <div className="font-montserrat dark:text-white">{category}</div>
           <div className="font-montserrat dark:text-white">{new Date(date).toLocaleDateString('en-US')}</div>
         </div>
-        <div className="dark:text-white font-montserrat">{ description? `Note: ${description}` : ''}</div>
+        <div className="dark:text-white font-montserrat max-lg:text-[13px]" >{ description? `Note: ${description}` : ''}</div>
       </div>
     </div>
     </>

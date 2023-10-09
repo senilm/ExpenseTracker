@@ -16,10 +16,7 @@
 body::-webkit-scrollbar {
   width: 0; /* Adjust the width as needed */
 }
-body{
-  background: rgb(246,243,234);
-  background: linear-gradient(90deg, rgba(246,243,234,1) 0%, rgba(237,242,247,1) 100%);
-}
+
 
 @layer components {
   .max-container {

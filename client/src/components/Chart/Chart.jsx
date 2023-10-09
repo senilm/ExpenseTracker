@@ -40,7 +40,8 @@ const Chart = ({incomesData, expensesData}) => {
                         return amount
                     })
                 ],
-                backgroundColor:'green',
+                backgroundColor:'blue',
+                
                 tension:0.2
             },
             {
@@ -51,14 +52,14 @@ const Chart = ({incomesData, expensesData}) => {
                         return amount
                     })
                 ],
-                backgroundColor:'red',
+                backgroundColor:'orange ',
                 tension:0.2
             }
         ]
     }
     return (
-        <div className=' bg-white-400  border-2 border-white border-solid  shadow-md  p-4 rounded-[20px] h-[100%] max-lg:h-auto max-lg:w-[100%]'>
-            <Line data={data}/>
+        <div className=' bg-white-400 dark:bg-slate-700 dark:border-opacity-25 border-white  border-[1px] border-solid  shadow-md  p-4 rounded-[20px] h-[100%] max-lg:h-auto max-lg:w-[100%] text-white '>
+            <Line data={data} />
         </div>
     )
 }

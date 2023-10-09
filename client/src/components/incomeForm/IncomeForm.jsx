@@ -53,7 +53,7 @@ const IncomeForm = ({ handleSubmitIncome }) => {
                     <textarea name="description" id="description" placeholder="Enter note here" cols="52" rows="4" value={incomeData.description} className="w-full border-2 border-white rounded-[30px] px-3 py-2 font-montserrat focus:outline-none" onChange={(e)=>handleChange(e)}></textarea>
                 </div>
                 
-                <button type="submit" className="border-2 border-white bg-gray-50  text-black px-4 py-2 w-fit self-center rounded-[30px]  active:bg-white-400 hover:bg-white-400 transition-all font-montserrat "><i className="fa-solid fa-plus mr-1"></i>Add Income</button>
+                <button type="submit" className="border-[1px] dark:border-opacity-25 dark:text-white border-white dark:bg-slate-700  text-black px-4 py-2 w-fit self-center rounded-[30px]  active:bg-white-400 hover:bg-transparent bg-white dark:hover:bg-transparent transition-all font-montserrat "><i className="fa-solid fa-plus mr-1"></i>Add Income</button>
             </form>
         </div>
     )

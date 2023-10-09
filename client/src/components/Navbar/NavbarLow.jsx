@@ -8,7 +8,7 @@ const NavbarLow = () => {
 
     return (
         <header className=' max-container px-2 shadow-md'>
-            <nav className='flex justify-between items-center p-3 font-montserrat'>
+            <nav className='flex justify-between items-center p-3 font-montserrat '>
 
                 <span>Expense Tracker</span>{/* <img src={NavLogo} alt="" /> */}
 

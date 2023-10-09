@@ -2,11 +2,11 @@ import { ThreeCircles } from 'react-loader-spinner'
 
 const Loader = () => {
     return (
-       <div className=' h-[100vh] flex justify-center items-center translate-y-[-40%]'>
+       <div className=' h-[100vh] flex justify-center items-center translate-y-[-40%] '>
          <ThreeCircles
             height="50"
             width="50"
-            color="black"
+            color="white"
             wrapperStyle={{}}
             wrapperClass=""
             visible={true}

@@ -5,14 +5,16 @@ export const DataContext = createContext(null)
 export const useGetData = () => (useContext(DataContext))
 
 const DataProvider = ({children}) => {
-    const [account, setAccount] = useState({
-        total:""
-    })
+    const [isDark, setIsDark] = useState(false)
+
+    const toggleDark = () =>{
+      setIsDark(!isDark)
+    }
 
   return (
     <DataContext.Provider value={{
-        account,
-        setAccount
+        isDark,
+        toggleDark
     }}>
         {children}
     </DataContext.Provider>

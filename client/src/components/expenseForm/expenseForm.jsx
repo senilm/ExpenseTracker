@@ -23,7 +23,7 @@ const ExpenseForm = ({ handleSubmitExpense }) => {
       }
 
     return (
-        <div className="max-w-md rounded max-lg:mb-16">
+        <div className="max-w-md rounded max-lg:mb-16 font-montserrat">
             <form onSubmit={(e)=>handleSubmit(e)} className=" flex flex-col gap-3">
                 
                 
@@ -55,7 +55,7 @@ const ExpenseForm = ({ handleSubmitExpense }) => {
                     <textarea name="description" id="description" cols="52" rows="4" value={expenseData.description} placeholder="Enter note here" className="focus:outline-none w-full border-2 border-white rounded-[30px] px-3 py-2" onChange={(e)=>handleChange(e)}></textarea>
                 </div>
                 
-                <button type="submit" className="border-2 border-white bg-gray-50  px-4 py-2 w-fit self-center rounded-[30px] active:bg-white-400 hover:bg-white-400 transition-all"><i className="fa-solid fa-plus mr-1"></i>Add Expense</button>
+                <button type="submit" className="border-[1px] dark:border-opacity-25 dark:text-white dark:bg-slate-700 border-white  px-4 py-2 w-fit self-center rounded-[30px] active:bg-white-400 hover:bg-transparent dark:hover:bg-transparent bg-white transition-all"><i className="fa-solid fa-plus mr-1"></i>Add Expense</button>
             </form>
         </div>
     )

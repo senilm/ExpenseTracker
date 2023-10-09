@@ -31,7 +31,7 @@ const LandingPage = ({ toggleDark }) => {
           </div>
         </section>
 
-        <section className=" lg:basis-[40%] mt-2 max-md:mt-[-12.9rem] lg:mr-20 ">
+        <section className=" lg:basis-[40%] mt-2 max-md:mt-[-11rem] lg:mr-20 ">
           <div className="">
             <img src={hero} alt=""  className="h-[34rem] -z-10  w-full"/>
           </div>

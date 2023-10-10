@@ -4,6 +4,7 @@ import { axiosInstance } from "../../service/api";
 import { useGetData } from "../../context/DataProvider"; //we'll use this custom hook to get info of DataContext
 import { DataContext } from "../../context/DataProvider"; //this is our context of context api and we won't use the useContext
 import Cookies from "js-cookie";
+import LoginLoader from "../../components/Loader/LoginLoader";
 
 const initialLogin = {
   email: "",
@@ -25,12 +26,15 @@ const Login = ({ setIsAuth }) => {
   const [errorMsg, setErrorMsg] = useState(" ");
   const [formType, setFormType] = useState("login");
   const [showPassword, setShowPassword] = useState(false);
+  const [loginLoader, setLoginLoader] = useState('Login')
+  const [registerLoader, setRegisterLoader] = useState('Register')
   const navigate = useNavigate();
 
   // const {setAccount} = useContext(DataContext)
   const { setAccount } = useGetData();
 
   const loginUser = async (e) => {
+    setLoginLoader(LoginLoader)
     e.preventDefault();
 
     try {
@@ -62,26 +66,30 @@ const Login = ({ setIsAuth }) => {
         Cookies.set("userData", JSON.stringify(userData), { expires: 1 });
         setLoginInfo(initialLogin);
         setIsAuth(true);
+        setLoginLoader('Login')
         navigate("/home");
       }
     } catch (error) {
+      setLoginLoader('Login')
       setErrorMsg(error.msg);
     }
   };
 
   const registerUser = async (e) => {
     e.preventDefault();
+    setRegisterLoader(LoginLoader)
     try {
       const response = await axiosInstance.post("/auth/register", RegisterInfo);
       if (response.isSuccess) {
         setErrorMsg("");
         setRegisterInfo(initialRegister);
+        setRegisterLoader('Register')
         setFormType("login");
       }
     } catch (error) {
       setErrorMsg(error.msg);
+      setRegisterLoader('Register')
     }
-    console.log();
   };
 
   const handleFormType = () => {
@@ -166,7 +174,7 @@ const Login = ({ setIsAuth }) => {
                 type="submit"
                 className="border border-black py-2 px-4 bg-black text-white active:bg-white-400 hover:bg-transparent shadow-lg hover:text-black   rounded-md  font-montserrat mt-5 transition-all"
               >
-                <div className=" transition-all hover:scale-105">Login</div>
+                <div className=" transition-all hover:scale-105">{loginLoader}</div>
               </button>
             </div>
             <div className="text-center my-5">OR</div>
@@ -255,7 +263,7 @@ const Login = ({ setIsAuth }) => {
                 type="submit"
                 className="border border-black py-2 px-4 rounded-md bg-black text-white active:bg-white-400 hover:bg-transparent shadow-lg hover:text-black transition-all mt-5"
               >
-                <div className=" transition-all hover:scale-105">Register</div>
+                <div className=" transition-all hover:scale-105">{registerLoader}</div>
               </button>
             </div>
             <div className="text-center my-5">OR</div>

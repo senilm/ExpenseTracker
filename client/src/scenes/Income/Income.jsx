@@ -85,7 +85,7 @@ const Income = ({ toggleDark }) => {
         ) : (
           <>
             <div className="lg:px-6 max-lg:px-5">
-              <div className="border-[1px] dark:border-opacity-25  border-white flex justify-center py-3 mb-5 mx-auto font-montserrat shadow-md bg-white-400 dark:bg-slate-700 dark:text-white">
+              <div className="border-[1px] dark:border-opacity-25 rounded-md border-white flex justify-center py-3 mb-5 mx-auto font-montserrat shadow-md bg-white-400 dark:bg-slate-700 dark:text-white">
                 Total Income: <div className="text-xl ml-3 text-green-400">{total}${" "}</div>
               </div>
             </div>

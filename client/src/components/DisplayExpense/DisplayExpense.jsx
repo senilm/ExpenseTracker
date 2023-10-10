@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 const DisplayExpense = ({amount, category, description,date,_id,user,deleteExpense}) => {
     return (
       <>
-          <div className="flex border-[1px] dark:border-opacity-25 dark:text-white border-white p-5 max-lg:px-1 max-lg:py-3 mb-4 flex-col gap-3 dark:bg-slate-700 bg-white-400 shadow-md w-full ">
+          <div className="flex border-[1px] dark:border-opacity-25 rounded-md dark:text-white border-white p-5 max-lg:px-1 max-lg:py-3 mb-4 flex-col gap-3 dark:bg-slate-700 bg-white-400 shadow-md w-full ">
               <div className="flex justify-between">
                   <div className=" self-center max-lg:text-[13px]">{amount}$</div>
                   <div className='max-lg:text-[13px]'>{category.toUpperCase()}</div>

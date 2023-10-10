@@ -81,7 +81,7 @@ const Expense = ({ toggleDark }) => {
         ) : (
           <>
             <div className="lg:px-6 max-lg:px-5">
-              <div className="border-[1px] dark:border-opacity-25  border-white flex justify-center py-3 mb-5 mx-auto font-montserrat shadow-md bg-white-400 dark:bg-slate-700 dark:text-white">
+              <div className="border-[1px] rounded-md dark:border-opacity-25  border-white flex justify-center py-3 mb-5 mx-auto font-montserrat shadow-md bg-white-400 dark:bg-slate-700 dark:text-white">
                 Total Expenses: <div className="text-xl ml-3 text-red-400">{total}${" "}</div>
               </div>
             </div>

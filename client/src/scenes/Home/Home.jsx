@@ -184,7 +184,12 @@ const Home = ({ toggleDark }) => {
                       Recent Transactions
                     </h1>
                     <div>
-                      {transactions.map((item) => {
+                      {transactions.length === 0 ? (
+                  <div className=" w-full  justify-center flex items-center">
+                    <div className=" font-montserrat lg:text-md max-lg:text-sm">
+                      No Transactions Available
+                    </div>
+                  </div> ): transactions.map((item) => {
                         return <HomeItemTrans {...item} key={item._id} />;
                       })}
                     </div>
@@ -196,13 +201,13 @@ const Home = ({ toggleDark }) => {
                     </h1>
                     <div className="border-[1px] border-white border-opacity-25 rounded-[23px] bg-white-400 dark:bg-slate-700 shadow-md ">
                       <div className="flex flex-col max-h-[100px] overflow-y-auto ">
-                        {toPayData.map((item) => (
+                        {toPayData.length > 0 ? toPayData.map((item) => (
                           <ToPay
                             {...item}
                             deleteToPay={deleteToPay}
                             key={item._id}
                           />
-                        ))}
+                        )):<div className=" text-center max-lg:text-sm font-montserrat">No Dues</div>}
                       </div>
                     </div>
                     <div>

@@ -96,13 +96,13 @@ const Expense = ({ toggleDark }) => {
                 id="expenses"
                 className="  lg:w-[70%] max-lg:w-full px-3 max-lg:px-2 font-montserrat  py-1"
               >
-                {expenseData.map((item) => (
+                {expenseData.length > 0 ? expenseData.map((item) => (
                   <DisplayExpense
                     {...item}
                     deleteExpense={deleteExpense}
                     key={item._id}
                   />
-                ))}
+                )) : <div className=" text-center">No Expenses Available...</div>}
               </div>
             </div>
           </>

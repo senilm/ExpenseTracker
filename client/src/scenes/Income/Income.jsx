@@ -6,6 +6,7 @@ import { useEffect, useState, useContext } from "react";
 import { getAuthHeader } from "../../service/api";
 import DisplayIncome from "../../components/DisplayIncome/DisplayIncome";
 import Loader from "../../components/Loader/Loader";
+import LoginLoader from "../../components/Loader/LoginLoader";
 
 const Income = ({ toggleDark }) => {
   const userDataString = Cookies.get("userData");
@@ -14,6 +15,7 @@ const Income = ({ toggleDark }) => {
   const [incomeData, setIncomeData] = useState([]);
   const [total, setTotal] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  
 
   const deleteIncome = async (id) => {
     const response = await axiosInstance.delete(`/income/deleteIncome/${id}`, {
@@ -29,6 +31,7 @@ const Income = ({ toggleDark }) => {
   };
 
   const handleSubmitIncome = async (incomeData) => {
+
     try {
       const response = await axiosInstance.post(
         "/income/addIncome",
@@ -101,13 +104,13 @@ const Income = ({ toggleDark }) => {
                 id="incomes"
                 className=" lg:w-[70%] max-lg:w-full px-3 max-lg:px-2 font-montserrat  py-1"
               >
-                {incomeData.map((item) => (
+                {incomeData.length >0 ? incomeData.map((item) => (
                   <DisplayIncome
                     {...item}
                     deleteIncome={deleteIncome}
                     key={item._id}
                   />
-                ))}
+                )) : <div className=" text-center"> No Income Available...</div>}
               </div>
             </div>
           </>

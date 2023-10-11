@@ -42,7 +42,6 @@ const Transaction = ({ toggleDark }) => {
         min-h-[100%]  rounded-[30px] flex-1  max-lg:pt-2 transition-all  dark:shadow-sm
        dark:border-opacity-25"
       >
-        
         {isLoading ? (
           <Loader />
         ) : (
@@ -52,9 +51,18 @@ const Transaction = ({ toggleDark }) => {
               className="flex p-3 max-lg:px-0 max-lg:py-0 "
             >
               <div id="transaction" className="px-3 py-3 max-lg:px-0 w-full ">
-                {transactions.map((item) => (
-                  <TransactionItem {...item} key={item._id} />
-                ))}
+                {transactions.length > 0 ? (
+                  transactions.map((item) => (
+                    <TransactionItem {...item} key={item._id} />
+                  ))
+                  
+                ) : (
+                  <div className=" w-full  justify-center flex items-center">
+                    <div className=" font-montserrat lg:text-xl max-lg:text-lg">
+                      No Transactions Available
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </>

@@ -4,7 +4,7 @@ import { getAccessToken } from './utils'
 
 export const getAuthHeader = () => getAccessToken()
 
-const API_URL = 'https://expense-tracker-fnia.onrender.com'
+const API_URL = 'https://expense-tracker-backend-murex.vercel.app'
 
 export const axiosInstance = axios.create({
     baseURL:API_URL,

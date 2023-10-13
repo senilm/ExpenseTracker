@@ -102,7 +102,7 @@ const Expense = ({ toggleDark }) => {
                     deleteExpense={deleteExpense}
                     key={item._id}
                   />
-                )) : <div className=" text-center">No Expenses Available...</div>}
+                )) : <div className=" text-center dark:text-white">No Expenses Available...</div>}
               </div>
             </div>
           </>

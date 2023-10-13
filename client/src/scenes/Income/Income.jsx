@@ -110,7 +110,7 @@ const Income = ({ toggleDark }) => {
                     deleteIncome={deleteIncome}
                     key={item._id}
                   />
-                )) : <div className=" text-center"> No Income Available...</div>}
+                )) : <div className=" text-center dark:text-white"> No Income Available...</div>}
               </div>
             </div>
           </>

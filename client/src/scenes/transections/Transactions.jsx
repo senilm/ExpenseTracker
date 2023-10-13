@@ -58,7 +58,7 @@ const Transaction = ({ toggleDark }) => {
                   
                 ) : (
                   <div className=" w-full  justify-center flex items-center">
-                    <div className=" font-montserrat lg:text-xl max-lg:text-lg">
+                    <div className=" font-montserrat lg:text-xl max-lg:text-lg dark:text-white">
                       No Transactions Available
                     </div>
                   </div>

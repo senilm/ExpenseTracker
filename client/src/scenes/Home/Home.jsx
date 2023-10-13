@@ -186,7 +186,7 @@ const Home = ({ toggleDark }) => {
                     <div>
                       {transactions.length === 0 ? (
                   <div className=" w-full  justify-center flex items-center">
-                    <div className=" font-montserrat lg:text-md max-lg:text-sm">
+                    <div className=" font-montserrat lg:text-md max-lg:text-sm dark:text-white ">
                       No Transactions Available
                     </div>
                   </div> ): transactions.map((item) => {
@@ -207,7 +207,7 @@ const Home = ({ toggleDark }) => {
                             deleteToPay={deleteToPay}
                             key={item._id}
                           />
-                        )):<div className=" text-center max-lg:text-sm font-montserrat">No Dues</div>}
+                        )):<div className=" text-center max-lg:text-sm font-montserrat dark:text-white">No Dues</div>}
                       </div>
                     </div>
                     <div>
